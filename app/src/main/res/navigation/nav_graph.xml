@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nav xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signUpFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.tele.crm.presentation.auth.login.LoginFragment"
+        android:label="Login Fragment"
+        app:destination="@id/signUpFragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:label="SignUp Fragment"
+        />
+    <fragment
+        android:id="@+id/ForgotFragment"
+        android:label="Forgot Password Fragment" />
+</nav>
