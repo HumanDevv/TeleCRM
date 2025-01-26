@@ -15,4 +15,18 @@
     <string name="password">Password</string>
     <string name="log_in">Log In</string>
     <string name="or">OR</string>
+    <string name="read_more">Read More</string>
+    <string name="show_less">Show Less</string>
+    <string name="network_error">Network Error</string>
+    <string name="not_connected_internet">Not Connected to internet</string>
+    <string name="retry">Retry</string>
+
+    <string name="mobile_number_cannot_be_empty">Mobile number cannot be empty</string>
+    <string name="please_enter_a_valid_mobile_number">Mobile number should vary between 8 to 13 digits</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="leaderboard">LeaderBoard</string>
+    <string name="add_leads">Add Leads</string>
+    <string name="refresh">Refresh</string>
+    <string name="tab_icon">Tab Icon</string>
+    <string name="show_fields">Show Fields</string>
 </resources>

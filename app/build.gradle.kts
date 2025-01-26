@@ -1,8 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.hiltDagger)
     id("kotlin-kapt")
+    alias(libs.plugins.serialization)
+    alias(libs.plugins.hiltDagger)
 }
 
 android {
@@ -35,6 +36,11 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    buildFeatures {
+        viewBinding= true
+        buildConfig= true
+    }
 }
 
 dependencies {
@@ -49,8 +55,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(libs.androidx.navigation.compose)
-
+    //navigation
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
     //hilt
     implementation(libs.dagger.hilt)
     kapt(libs.dagger.hilt.compiler)
@@ -60,5 +67,28 @@ dependencies {
     implementation(libs.retrofit.converter)
     implementation(libs.okhttp.okhttp)
     implementation(libs.okhttp.logging)
+
+    //To change dimensions according to screen size
+    implementation(libs.sdp.sdp)
+    implementation(libs.ssp.ssp)
+
+    kapt(libs.dagger.hilt.compiler)
+    implementation(libs.dagger.hilt)
+
+    //coroutines
+    implementation(libs.coroutines)
+
+    // kotlin-serialization
+    implementation(libs.kotlinx.serialization.core)
+    implementation(libs.kotlinx.serialization.json)
+
+    //datastore
+    implementation(libs.datastore)
+
+    //Glide
+    implementation(libs.glide)
+    implementation ("androidx.viewpager2:viewpager2:1.1.0")
+
+    implementation("ir.mahozad.android:pie-chart:0.7.0")
 
 }

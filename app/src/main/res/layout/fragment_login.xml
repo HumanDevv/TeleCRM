@@ -5,8 +5,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/blue"
-    android:padding="16dp">
-
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/_15sdp">
     <!-- Header Text -->
     <TextView
         android:id="@+id/header_text"
@@ -20,19 +23,44 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_logo"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@+id/header_text">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_launcher_background"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TeleCRM"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/layout_title"
-        app:layout_constraintTop_toBottomOf="@+id/header_text">
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/layout_logo">
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_launcher_foreground"/>
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_notifications_none_24"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Leads"/>
+            android:text="Leads"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"/>
     </LinearLayout>
 
     <TextView
@@ -44,11 +72,10 @@
         android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@id/layout_title"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="16dp" />
 
     <EditText
-        android:id="@+id/email_input"
+        android:id="@+id/edt_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="emailAddress"
@@ -68,12 +95,22 @@
         android:text="@string/password"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintTop_toBottomOf="@id/email_input"
+        app:layout_constraintTop_toBottomOf="@id/edt_email"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="12dp" />
+    <TextView
+        android:id="@+id/forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/edt_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
     <EditText
-        android:id="@+id/password_input"
+        android:id="@+id/edt_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="password"
@@ -88,10 +125,10 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_submit"
+        android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/password_input"
+        app:layout_constraintTop_toBottomOf="@+id/edt_password"
         android:layout_marginTop="15dp"
         android:text="@string/log_in"
         android:textAllCaps="false"
@@ -107,7 +144,7 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/btn_submit"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
         >
 
         <!-- "New to CRM?" Text -->
@@ -130,7 +167,6 @@
             android:textStyle="bold"
             android:textColor="@color/white"
             android:fontFamily="sans-serif-medium"
-            android:paintFlags="underline"
             android:clickable="true"
             android:focusable="true" />
     </LinearLayout>
@@ -197,7 +233,7 @@
             android:id="@+id/googleLogo"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_launcher_foreground"
+            android:src="@drawable/google"
             android:contentDescription="@string/app_name" />
 
         <TextView
@@ -210,5 +246,5 @@
             android:textColor="@color/black"
             android:fontFamily="sans-serif-medium" />
     </LinearLayout>
-
+</androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

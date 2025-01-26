@@ -166,7 +166,7 @@ app:layout_constraintTop_toBottomOf="@+id/layout_title"
             android:id="@+id/googleLogo"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_launcher_foreground"
+            android:src="@drawable/google"
             android:contentDescription="@string/app_name" />
 
         <TextView

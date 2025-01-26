@@ -3,20 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/homeFragment"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="Home"
+        android:id="@+id/leadFragment"
+        android:icon="@drawable/user"
+        android:title="Leads"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/dashboardFragment"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="Dashboard"
+        android:id="@+id/callFragment"
+        android:icon="@drawable/telephone"
+        android:title="Call"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/profileFragment"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/setting"
         android:title="Profile"
         app:showAsAction="ifRoom" />
 </menu>
