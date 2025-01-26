@@ -84,6 +84,9 @@
         <action
             android:id="@+id/action_leadFragment_to_leadDetailsFragment"
             app:destination="@id/leadDetailsFragment" />
+        <action
+            android:id="@+id/action_leadFragment_to_addLeadsFragment"
+            app:destination="@id/addLeadsFragment" />
     </fragment>
 
     <fragment

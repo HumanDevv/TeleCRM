@@ -22,7 +22,6 @@ class CallsAdapter : RecyclerView.Adapter<CallsAdapter.CallViewHolder>() {
             binding.tvPhoneNumber.text = call.phoneNumber
             binding.tvStatus.text = call.status
             binding.tvDuration.text = call.duration
-            binding.tvTimeAgo.text = call.timeAgo
             binding.ivStar.isSelected = call.isStarred
 
             // Optional: Handle click for starring

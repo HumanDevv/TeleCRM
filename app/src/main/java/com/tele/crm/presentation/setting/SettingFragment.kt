@@ -27,9 +27,7 @@ class SettingFragment : Fragment() {
     }
 
     private fun handleClicks(){
-        binding.layoutAddLeads.setOnClickListener {
-            findNavController().navigate(R.id.action_settingFragment_to_addLeadsFragment)
-        }
+
 
         binding.layoutCampaign.setOnClickListener {
             findNavController().navigate(R.id.action_settingFragment_to_campaignFragment)

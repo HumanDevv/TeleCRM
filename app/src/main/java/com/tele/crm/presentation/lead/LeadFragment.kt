@@ -14,6 +14,7 @@ import com.tele.crm.databinding.FragmentCallBinding
 import com.tele.crm.databinding.FragmentLeadBinding
 import com.tele.crm.presentation.call.CallViewModel
 import com.tele.crm.presentation.call.CallsAdapter
+import com.tele.crm.utils.extension.setDebouncedOnClickListener
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
@@ -34,6 +35,11 @@ class LeadFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.addLeadBtn.setDebouncedOnClickListener {
+            findNavController().navigate(R.id.action_leadFragment_to_addLeadsFragment)
+        }
+
 
         leadsAdapter = LeadsAdapter { leadEntry ->
            findNavController().navigate(R.id.leadDetailsFragment)

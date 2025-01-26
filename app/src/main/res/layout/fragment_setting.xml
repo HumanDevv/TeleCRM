@@ -15,241 +15,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginHorizontal="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_25sdp"
     >
 
+    <LinearLayout
+        android:id="@+id/layout_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/user"/>
     <TextView
-        android:id="@+id/settint_title"
+        android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Setting"
+        android:text="Goutam "
         android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textStyle="bold"
         android:layout_marginTop="@dimen/_15sdp"
-        android:textSize="18sp" />
-
-    <!-- Top Profile Section -->
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/profile_section"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-app:layout_constraintTop_toBottomOf="@+id/settint_title"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/_15sdp"
-        app:strokeWidth="0dp"
-        app:cardElevation="@dimen/_1sdp"
-        app:cardUseCompatPadding="true"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="@dimen/_5sdp"
-        app:layout_constraintEnd_toEndOf="parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@android:color/white"
-      >
-
-        <!-- User Info Row -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="16dp"
-
-            android:gravity="center_vertical">
-
-            <!-- Profile Image -->
-            <ImageView
-                android:id="@+id/profile_image"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/profile"
-                android:backgroundTint="@color/blue"
-                android:contentDescription="@string/profile_image"
-                android:scaleType="centerCrop"
-                android:layout_gravity="center" />
-
-            <!-- Profile Text -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/user_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Manjeet Singh"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/user_email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Manjeet@gmail.com"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_1sdp"
-            android:background="@color/gray"
-            android:layout_marginTop="@dimen/_8sdp"/>
-
-        <!-- Subscription Section -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-android:layout_marginVertical="@dimen/_5sdp"            >
-
-            <TextView
-                android:id="@+id/pro_status"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded_background"
-                android:paddingHorizontal="8dp"
-                android:backgroundTint="@color/green"
-                android:paddingVertical="4dp"
-                android:text="Pro Till 10/03/2025"
-                android:textColor="@color/dark_green"
-                android:textStyle="bold"
-                android:textSize="14sp" />
-
-            <ImageView
-                android:id="@+id/refresh_icon"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/reload"
-                android:layout_alignParentEnd="true"
-                android:contentDescription="@string/refresh" />
-        </RelativeLayout>
-    </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
-    <!-- Leaderboard and Add Leads -->
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/options_section"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20sdp"
-        app:strokeWidth="0dp"
-        app:cardElevation="@dimen/_1sdp"
-        app:cardUseCompatPadding="true"
-        app:cardCornerRadius="@dimen/_5sdp"
-        app:cardBackgroundColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/profile_section"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:baselineAligned="false"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:paddingVertical="16dp"
-        android:weightSum="1"
-    >
-
-        <!-- Leaderboard -->
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginEnd="16dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/trophy"
-                android:contentDescription="@string/leaderboard" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Leaderboard"
-                android:textColor="@color/black"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <!-- Add Leads -->
-        <LinearLayout
-            android:id="@+id/layout_add_leads"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginEnd="16dp">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/add_lead"
-                android:contentDescription="@string/add_leads" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add Leads"
-                android:layout_marginTop="@dimen/_10sdp"
-
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-        </LinearLayout>
-    </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
-    <!-- Campaigns Section -->
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/layout_campaign"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20sdp"
-        app:strokeWidth="0dp"
-        app:cardElevation="@dimen/_1sdp"
-        app:cardUseCompatPadding="true"
-        app:cardCornerRadius="@dimen/_5sdp"
-        app:cardBackgroundColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/options_section"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-    <TextView
+        android:textSize="@dimen/_16ssp" />
+        <TextView
+        android:id="@+id/tv_mobile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="Campaigns"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:background="@android:color/white"
-     />
-            <ImageView
-                android:id="@+id/next_campaign"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="16dp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/baseline_keyboard_arrow_right_24"
-                android:layout_alignParentEnd="true"
-                android:contentDescription="@string/refresh" />
-        </RelativeLayout>
-    </com.google.android.material.card.MaterialCardView>
+        android:text="917546546 "
+        android:textColor="@color/darkgray"
+            android:layout_marginTop="@dimen/_2sdp"
+        android:textSize="@dimen/_12ssp" />
+        <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goutam @gmai.copm"
+            android:layout_marginTop="@dimen/_2sdp"
 
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/layout_message"
         android:layout_width="match_parent"
@@ -260,36 +71,24 @@ android:layout_marginVertical="@dimen/_5sdp"            >
         app:cardUseCompatPadding="true"
         app:cardCornerRadius="@dimen/_5sdp"
         app:cardBackgroundColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/layout_campaign"
+        app:layout_constraintTop_toBottomOf="@id/layout_profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/message_template"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="Message Templates"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:background="@android:color/white"/>
-
             <RelativeLayout
-                android:id="@+id/layout_whatsapp"
+                android:id="@+id/layout_campaign"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/message_template"
                 >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="Whatsapp"
+                android:text="Campaigns"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:background="@android:color/white"
@@ -311,7 +110,7 @@ android:layout_marginVertical="@dimen/_5sdp"            >
                 android:layout_height="1dp"
                 android:background="@color/gray"
                 android:id="@+id/view1"
-                android:layout_below="@+id/layout_whatsapp"/>
+                android:layout_below="@+id/layout_campaign"/>
             <RelativeLayout
                 android:id="@+id/layout_sms"
                 android:layout_width="match_parent"
@@ -323,7 +122,7 @@ android:layout_marginVertical="@dimen/_5sdp"            >
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:text="SMS"
+                    android:text="Msg Templates"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:background="@android:color/white"
@@ -357,7 +156,7 @@ android:layout_marginVertical="@dimen/_5sdp"            >
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:text="Whatsapp"
+                    android:text="Lables"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:background="@android:color/white"

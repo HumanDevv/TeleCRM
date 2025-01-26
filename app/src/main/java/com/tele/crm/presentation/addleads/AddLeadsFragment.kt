@@ -27,23 +27,7 @@ class AddLeadsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         handleClicks()
-        val adapter = ViewPagerAdapter(this)
-        binding.viewPager.adapter = adapter
-        TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
-            val tabBinding = TabItemBinding.inflate(LayoutInflater.from(requireContext()))
-            tab.customView = tabBinding.root
 
-            when (position) {
-                0 -> {
-                    tabBinding.tabIcon.setImageResource(R.drawable.comment) // Replace with your icon
-                    tabBinding.tabText.text = "Single Lead"
-                }
-                1 -> {
-                    tabBinding.tabIcon.setImageResource(R.drawable.comment) // Replace with your icon
-                    tabBinding.tabText.text = "Double Lead"
-                }
-            }
-        }.attach()
     }
 
     private fun handleClicks(){

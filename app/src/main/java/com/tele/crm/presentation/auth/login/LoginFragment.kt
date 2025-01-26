@@ -48,17 +48,17 @@ class LoginFragment : Fragment() {
         binding.apply {
 
             btnLogin.setDebouncedOnClickListener {
-               // validateFields()
-                findNavController().navigate(R.id.action_loginFragment_to_leadFragment)
+                validateFields()
+               // findNavController().navigate(R.id.action_loginFragment_to_leadFragment)
             }
 
-            createAccountText.setDebouncedOnClickListener {
+          /*  createAccountText.setDebouncedOnClickListener {
                 findNavController().navigate(R.id.action_loginFragment_to_signUpFragment)
             }
 
             forgetPassword.setDebouncedOnClickListener {
                 findNavController().navigate(R.id.action_loginFragment_to_ForgotFragment)
-            }
+            }*/
 
 
         }

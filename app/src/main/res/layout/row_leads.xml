@@ -33,12 +33,13 @@
             android:layout_height="wrap_content"
             android:text="Phone Number"
             android:textSize="@dimen/_12ssp"
-            android:textColor="@android:color/darker_gray"/>
+            android:textColor="@color/black"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:visibility="gone"
             android:gravity="center_vertical"
             android:layout_marginTop="@dimen/_5sdp">
 
@@ -51,7 +52,7 @@
                 android:textSize="@dimen/_12ssp"/>
 
             <TextView
-                android:id="@+id/tvStatus"
+                android:id="@+id/tvStatus1"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/_20sdp"
                 android:text="Connected"
@@ -76,33 +77,30 @@
             android:background="@color/gray"
             android:layout_marginTop="5dp"
             android:id="@+id/view" />
-        <!-- Call Info Layout -->
+
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp">
 
-            android:layout_marginTop="5dp">
-
-            <ImageView
-                android:id="@+id/iv_call"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/telephone" />
-
-            <TextView
-                android:id="@+id/tv_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0s"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/iv_call"
-                android:textSize="14sp"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:textColor="@color/black" />
-
-
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:text="Connected"
+            android:textSize="@dimen/_12ssp"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_1sdp"
+            android:background="@drawable/status_shape"/>
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:text="Connected"
+            android:textSize="@dimen/_12ssp"
+            android:layout_alignParentEnd="true"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_1sdp" />
         </RelativeLayout>
-
-
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
