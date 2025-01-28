@@ -30,7 +30,9 @@ import com.tele.crm.databinding.ActivityMainBinding
 import com.tele.crm.databinding.ProgressDialogBinding
 import com.tele.crm.presentation.lead.LeadFragment
 import com.tele.crm.utils.extension.visible
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navigationController: NavController
@@ -88,9 +90,7 @@ class MainActivity : AppCompatActivity() {
 
                 }
 
-                else->{
-                    binding.bottomNav.visibility=View.GONE
-                }
+
             }
 
 
@@ -128,20 +128,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun animateBottomNavHeight(view: View, fromHeight: Int, toHeight: Int) {
-        val animator = ValueAnimator.ofInt(fromHeight.dpToPx(), toHeight.dpToPx())
-        animator.addUpdateListener { valueAnimator ->
-            val params = view.layoutParams
-            params.height = valueAnimator.animatedValue as Int
-            view.layoutParams = params
-        }
-        animator.duration = 300 // Animation duration in milliseconds
-        animator.start()
-    }
 
-    private fun Int.dpToPx(): Int {
-        return (this * Resources.getSystem().displayMetrics.density).toInt()
-    }
+
 
     private var progressDialog: Dialog? = null
 

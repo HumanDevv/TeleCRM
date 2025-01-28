@@ -55,6 +55,9 @@ class CampaignFragment : Fragment() {
             ivBack.setDebouncedOnClickListener {
                 findNavController().popBackStack()
             }
+            add.setDebouncedOnClickListener {
+                findNavController().navigate(R.id.action_campaignFragment_to_addCampaign)
+            }
         }
     }
 }

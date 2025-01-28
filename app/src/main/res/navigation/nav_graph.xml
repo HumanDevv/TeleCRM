@@ -137,6 +137,9 @@
         <action
             android:id="@+id/action_campaignFragment_to_campaignDetailsFragment"
             app:destination="@id/campaignDetailsFragment" />
+        <action
+            android:id="@+id/action_campaignFragment_to_addCampaign"
+            app:destination="@id/addCampaign" />
     </fragment>
     <fragment
         android:id="@+id/campaignDetailsFragment"
@@ -157,5 +160,14 @@
         app:popExitAnim="@anim/nav_slide_out_right"
         app:popEnterAnim="@anim/nav_slide_in_left"
         android:name="com.tele.crm.presentation.leadDetails.LeadDetailsFragment"/>
+    <fragment
+        android:id="@+id/addCampaign"
+        android:label="Add Campaign Fragment"
+        tools:layout="@layout/fragment_add"
+        app:enterAnim="@anim/nav_slide_in_right"
+        app:exitAnim="@anim/nav_slide_out_left"
+        app:popExitAnim="@anim/nav_slide_out_right"
+        app:popEnterAnim="@anim/nav_slide_in_left"
+        android:name="com.tele.crm.presentation.campaign.AddCampaignFragment"/>
 
 </navigation>
